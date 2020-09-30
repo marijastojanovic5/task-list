@@ -12,6 +12,7 @@ loadEventListeners();
 function loadEventListeners() {
   // Add task event
   form.addEventListener('submit', addTask);
+  taskList.addEventListener('click',deleteTask)
 }
 
 // Add Task
@@ -31,7 +32,7 @@ function addTask(e) {
   // Add class
   link.className = 'delete-item secondary-content';
   // Add icon html
-  link.innerHTML = '<i class="fa fa-remove"></i>';
+  link.innerHTML = '<i class="fas fa-times"></i>';
   // Append the link to li
   li.appendChild(link);
 
@@ -42,4 +43,13 @@ function addTask(e) {
   taskInput.value = '';
 
   e.preventDefault();
+}
+
+//delete task
+function deleteTask(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+    e.target.parentElement.parentElement.remove();
+
+  }
+
 }

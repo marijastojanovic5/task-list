@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    
+
     <title>Task list</title>
   </head>
   <body>
@@ -28,14 +30,14 @@
                     <input type="text" name="task" id="task" />
                     <label for="task">New task</label>
                   </div>
-                  <input type="submit" value="Add task" class="btn">
+                  <input type="submit" value="Add task" class="btn" />
                 </form>
               </div>
             </div>
             <div class="card-action">
               <h5 id="task-title">Tasks</h5>
               <div class="input-field col s12">
-                <input type="text" name="filter" id="filter">
+                <input type="text" name="filter" id="filter" />
                 <label for="filer">Filter tasks</label>
               </div>
               <ul class="collection"></ul>

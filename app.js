@@ -106,12 +106,12 @@ function removeTaskFromLocalStorage(taskItem) {
   } else {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
-  tasks.forEach(function(task,index) {
+  tasks.forEach(function (task, index) {
     if (taskItem.textContent === task) {
       tasks.splice(index, 1);
     }
   });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 //clear tasks
 function clearTasks() {
@@ -120,6 +120,10 @@ function clearTasks() {
   }
   //other way
   //taskList.innerHTML='';
+  clearTasksFromLocalStorage();
+}
+function clearTasksFromLocalStorage(){
+  localStorage.clear();
 }
 //filter tasks
 function filterTasks(e) {
